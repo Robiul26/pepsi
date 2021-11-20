@@ -141,7 +141,7 @@ text-transform: capitalize;
     }
     #closeMenu{
         display: block;
-        margin-left: 90%;
+        margin-left: 85%;
         font-size: 1.5rem;
         font-weight: bold;
     }
