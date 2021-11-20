@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Brand</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="sec">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="logo">
+                    </div>
+
+                    <div id="menuBar" onclick="menuShow()">Menu</div>
+                    <div class="menu-wrapper">
+                        <ul class="menu">
+                            <li><a href="#" id="closeMenu" onclick="closeMenu()">Close</a></li> <br />
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">products</a></li>
+                            <li><a href="#">what's new</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Hero -->
+        <div class="container">
+            <div class="hero-section">
+                <div class="articles">
+                    <h1>that's what <br /> <span>i like</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A in natus soluta cum dolorem. Nobis,
+                        aut ad,
+                        natus possimus pariatur unde omnis exercitationem architecto sequi dignissimos illo? Soluta
+                        perferendis,
+                        distinctio veniam fugiat? Quasi provident eaque amet quas.</p>
+                    <button>View All Products</button>
+                </div>
+                <div class="aside">
+                    <img id="bigImg" src="./images/pepsi001.png" alt="pepsi001">
+                    <ul class="social-links">
+                        <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="footer-slide-product">
+                    <img onclick="imageShow('./images/pepsi001.png'); changeColor('#0062be')"
+                        src="./images/pepsi001.png" alt="">
+                    <img onclick="imageShow('./images/pepsi002.png'); changeColor('#e60c2c')"
+                        src="./images/pepsi002.png" alt="">
+                    <img onclick="imageShow('./images/pepsi003.png'); changeColor('#1e1e1e')"
+                        src="./images/pepsi003.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let bigImg = document.getElementById('bigImg');
+        let secBgColor = document.querySelector('.sec');
+        console.log(bigImg);
+        function imageShow(any) {
+            bigImg.src = any;
+        }
+        function changeColor(color) {
+            secBgColor.style.background = color;
+        }
+
+
+        let menuBar = document.getElementsByClassName('menuBar');
+        let menuWrapper = document.querySelector('.menu-wrapper');
+
+        function menuShow() {
+            menuWrapper.style.right = "0";
+        }
+        function closeMenu() {
+            menuWrapper.style.right = "100%";
+        }
+    </script>
+</body>
+
+</html>
